@@ -1,10 +1,3 @@
-
-   style.css — Expense & Budget Visualizer
-
-/* ---------- Reset & Base ---------- */
-*, *::before, *::after {
-/* style.css - Main stylesheet */
-
 /* ---------- Reset & Base ---------- */
 * {
   margin: 0;
@@ -20,26 +13,34 @@ body {
   transition: background 0.3s, color 0.3s;
 }
 
-h1 {
-  font-size: 2rem;
-  margin-bottom: 10px;
+.app-wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-p {
-  font-size: 1rem;
-  line-height: 1.6;
+/* Tombol Tema */
+.btn-theme {
+  padding: 8px 15px;
+  cursor: pointer;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: #fff;
+  margin-bottom: 20px;
 }
 
-/* --- Bagian Dark Mode --- */
+/* --- Mode Gelap --- */
 body.dark-theme {
-    background-color: #1a1a1a !importamt;
-    color: #ffffff !importantant;
+    background-color: #1a1a1a !important;
+    color: #ffffff !important;
 }
 
 body.dark-theme .app-wrapper,
-body.dark-theme .balance-card,
-body.dark-theme section,
-body.dark-theme div {
+body.dark-theme div,
+body.dark-theme section {
     background-color: #2d2d2d !important;
     color: #ffffff !important;
 }
