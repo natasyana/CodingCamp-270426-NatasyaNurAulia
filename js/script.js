@@ -130,8 +130,7 @@ function renderSummary() {
   totalExpenseEl.textContent = formatRupiah(expense);
 
   // Color balance based on sign
-  totalBalanceEl.style.color =
-    balance < 0 ? '#fca5a5' : '#fff';
+  totalBalanceEl.style.color = balance < 0 ? '#e74c3c' : '#3498db';
 }
 
 function renderList() {
@@ -152,14 +151,13 @@ function renderList() {
     const sign = t.type === 'income' ? '+' : '-';
 
     li.innerHTML = `
-      <span class="item-icon">${CATEGORY_ICONS[t.category] || '📦'}</span>
-      <div class="item-info">
-        <p class="item-name">${escapeHtml(t.name)}</p>
-        <p class="item-meta">${t.category} · ${t.date}</p>
-      </div>
-      <span class="item-amount ${t.type}">${sign}${formatRupiah(t.amount)}</span>
-      <button class="btn-delete" aria-label="Delete transaction" data-id="${t.id}">✕</button>
-    `;
+  <div class="item-info">
+    <p class="item-name">${escapeHtml(t.name)}</p>
+    <p class="item-amount ${t.type}">${sign}${formatRupiah(t.amount)}</p>
+    <span class="category-badge">${t.category}</span>
+  </div>
+  <button class="btn-delete" data-id="${t.id}">Delete</button>
+`;
 
     li.querySelector('.btn-delete').addEventListener('click', () => {
       handleDeleteTransaction(t.id);
