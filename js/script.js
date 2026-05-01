@@ -279,3 +279,18 @@ function clearError(input, errorEl) {
   input.classList.remove('invalid');
   errorEl.textContent = '';
 }
+
+const toggleBtn = document.getElementById('dark-mode-toggle');
+
+toggleBtn.addEventListener('click', () => {
+  document.body.classList.toggle('dark-theme');
+
+  // Opsional: Simpan pilihan tema ke Local Storage
+  const isDark = document.body.classList.contains('dark-theme');
+  localStorage.setItem('theme', isDark ? 'dark' : 'light');
+});
+
+// Cek tema saat halaman dibuka
+if (localStorage.geItem('theme') === 'dark') {
+    document.body.classList.add('dark-theme');
+}
