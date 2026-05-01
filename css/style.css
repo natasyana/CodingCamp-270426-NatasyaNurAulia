@@ -56,7 +56,6 @@ body.dark-theme .app-wrapper {
   box-shadow: 0 10px 25px rgba(0,0,0,0.5);
 }
 
-/* Pastikan kartu tetap ungu di dark mode agar tetap bagus seperti gambar ke-3 */
 body.dark-theme .balance-card {
   background: #5a52d5; 
 }
