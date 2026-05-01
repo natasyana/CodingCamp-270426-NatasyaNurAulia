@@ -1,140 +1,62 @@
 /* ---------- Reset & Base ---------- */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  background-color: #f8f9fa; /* Latar belakang abu terang sesuai contoh */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f2f5;
   color: #333;
-  padding: 40px 20px;
+  padding: 20px;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 .app-wrapper {
-  max-width: 900px;
+  max-width: 600px;
   margin: 0 auto;
-}
-
-/* ---------- Total Balance Section ---------- */
-.balance-card {
-  background: #ffffff;
-  padding: 40px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-  text-align: center;
-  margin-bottom: 30px;
-  border: 1px solid #eee;
-}
-
-.balance-label {
-  text-transform: uppercase;
-  font-size: 14px;
-  color: #666;
-  letter-spacing: 1px;
-  margin-bottom: 10px;
-}
-
-.balance-amount {
-  font-size: 64px;
-  color: #3498db; /* Biru sesuai contoh gambar */
-  font-weight: bold;
-}
-
-/* ---------- Form & Sections ---------- */
-section {
   background: #ffffff;
   padding: 25px;
-  border-radius: 8px;
-  border: 1px solid #eee;
-  margin-bottom: 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  transition: background 0.3s ease;
 }
 
-.section-title {
-  font-size: 20px;
-  margin-bottom: 20px;
-  font-weight: 600;
-}
+/* Header Styling */
+.app-header { text-align: center; margin-bottom: 20px; }
+.app-header h1 { color: #6c63ff; margin-bottom: 5px; }
 
-.form-group {
-  margin-bottom: 15px;
-}
-
-label {
-  display: block;
-  font-size: 14px;
-  font-weight: bold;
-  margin-bottom: 8px;
-}
-
-input, select {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  font-size: 16px;
-}
-
-.btn-add {
-  width: 100%;
-  background-color: #3498db;
+/* Balance Card (Desain Ungu Gambar ke-3) */
+.balance-card {
+  background: #6c63ff; /* Warna Ungu */
   color: white;
-  padding: 15px;
-  border: none;
-  border-radius: 4px;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
+  padding: 30px;
+  border-radius: 20px;
+  margin-bottom: 30px;
+  text-align: left;
 }
 
-/* ---------- Transaction List ---------- */
-.transaction-item {
+.balance-label { font-size: 14px; opacity: 0.9; text-transform: uppercase; }
+.balance-amount { font-size: 48px; margin: 10px 0; color: white !important; } /* Paksa putih agar terlihat */
+
+.balance-summary {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 15px 0;
-  border-bottom: 1px solid #f1f1f1;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 15px;
+  margin-top: 20px;
 }
 
-.item-info {
-  flex-grow: 1;
-}
-
-.item-name {
-  font-weight: bold;
-  font-size: 18px;
-}
-
-.item-amount {
-  font-size: 18px;
-  color: #3498db;
-  margin: 5px 0;
-}
-
-.category-badge {
-  background: #f1f1f1;
-  padding: 4px 12px;
-  border-radius: 4px;
-  font-size: 12px;
-  color: #666;
-}
-
-.btn-delete {
-  background: #e74c3c;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-/* Dark Mode (Challenge) */
+/* ---------- Dark Mode Styles ---------- */
 body.dark-theme {
-  background-color: #1a1a1a;
-  color: #f1f1f1;
+  background-color: #121212;
+  color: #e0e0e0;
 }
-body.dark-theme section, body.dark-theme .balance-card {
-  background-color: #2d2d2d;
-  border-color: #444;
+
+body.dark-theme .app-wrapper {
+  background-color: #1e1e1e;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+/* Pastikan kartu tetap ungu di dark mode agar tetap bagus seperti gambar ke-3 */
+body.dark-theme .balance-card {
+  background: #5a52d5; 
 }

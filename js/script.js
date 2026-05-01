@@ -130,7 +130,7 @@ function renderSummary() {
   totalExpenseEl.textContent = formatRupiah(expense);
 
   // Color balance based on sign
-  totalBalanceEl.style.color = balance < 0 ? '#e74c3c' : '#3498db';
+  totalBalanceEl.style.color = balance < 0 ? '#ffcfcf' : '';
 }
 
 function renderList() {
