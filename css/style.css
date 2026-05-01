@@ -29,18 +29,12 @@ p {
   line-height: 1.6;
 }
 
-/*  Warna Mode Gelap*/
 body.dark-theme {
-    background-color: #1a1a1a;
-    color: #ffffff;
+    background-color: #1a1a1a; !important;
+    color: white !important;
 }
 
-body.dark-theme input, body.dark-theme select {
-    background-color: #333;
-    color: white;
-    border: 1px solid #555;
-}
-
-body.dark-theme .tem-list { /8 sesuaikan nama class list kamu */
+body.dark-theme .card, body.dark-theme div {
     background-color: #2d2d2d;
+    color: white;
 }
