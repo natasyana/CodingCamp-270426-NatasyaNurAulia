@@ -280,11 +280,14 @@ function clearError(input, errorEl) {
   errorEl.textContent = '';
 }
 
-const toggleBtn = document.getElementById('dark-mode-toggle');
+// Fitur Toggle Dark Mode
+const btnToggle = document.getElementById('dark-mode-toggle');
 
-toggleBtn.addEventListener('click', function() {
-  document.body.classList.toggle('dark-theme');
-});
+if (btnToggle) {
+    btnToggle.addEventListener('click', function() {
+      document.body.classList.toggle('dark-theme');
+    });
+}
 
   const isDark = document.body.classList.contains('dark-theme');
   localStorage.setItem('theme', isDark ? 'dark' : 'light');
