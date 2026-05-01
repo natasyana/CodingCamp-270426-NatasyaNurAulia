@@ -285,14 +285,15 @@ const btnToggle = document.getElementById('dark-mode-toggle');
 
 if (btnToggle) {
     btnToggle.addEventListener('click', function() {
-      document.body.classList.toggle('dark-theme');
+        document.body.classList.toggle('dark-theme');
+        
+        // Simpan pilihan ke Local Storage
+        const isDark = document.body.classList.contains('dark-theme');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
     });
 }
 
-  const isDark = document.body.classList.contains('dark-theme');
-  localStorage.setItem('theme', isDark ? 'dark' : 'light');
-});
-
-if (localStorage.geItem('theme') === 'dark') {
+// Cek tema saat halaman pertama kali dimuat
+if (localStorage.getItem('theme') === 'dark') {
     document.body.classList.add('dark-theme');
 }
